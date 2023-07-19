@@ -1,0 +1,270 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  text-decoration: none;
+  color: #18a173;
+}
+body {
+  font-size: 16px;
+  text-align: center;
+}
+
+/*navigation bar*/
+nav {
+  background-color: rgb(245, 238, 229);
+}
+ul {
+  display: flex;
+  justify-content: space-around;
+}
+li {
+  padding: 0.3rem;
+  margin: 0.2rem;
+  list-style: none;
+  transition-duration: 0.5s;
+  font-size: 1rem;
+}
+.navclick :hover {
+  transition-duration: 0.5s;
+  transform: scale(1.15);
+}
+
+/*cover*/
+
+main article {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: rgb(209, 244, 249);
+}
+
+#p1 {
+  font-size: 1.5rem;
+  color: rgb(146, 96, 35);
+  text-align: center;
+  padding: 30px 0 10px;
+}
+#p2 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: rgb(208, 133, 53);
+  text-align: center;
+  padding: 10px;
+}
+#p3 {
+  font-size: 1.2rem;
+  color: rgb(86, 153, 155);
+  text-align: center;
+  padding: 22px;
+}
+#p4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(243, 88, 98);
+  text-align: center;
+  padding: 0 0 10px;
+  word-spacing: 20px;
+}
+article p {
+  background-color: rgb(209, 244, 249);
+}
+aside img {
+  display: block;
+  width: 100vw;
+  -webkit-filter: brightness(90%);
+}
+
+/*for bigger display flex container*/
+main article {
+  text-align: center;
+}
+body > article {
+  width: 100vw;
+  text-align: center;
+}
+
+body > article > section 
+{
+  width: 100vw;
+}
+
+/*blog*/
+.blog a {
+  font-size: 2rem;
+  color: rgb(202, 207, 207);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.7s;
+}
+
+.blog a:hover {
+  color: rgb(202, 225, 225);
+  text-decoration: none;
+  font-size: 2.5rem;
+  transition: 0.7s;
+}
+
+.blog {
+  padding: 5rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(image/ocean.png);
+  background-size: cover;
+}
+
+/*about*/
+
+.about a {
+  font-size: 2rem;
+  color: rgb(235, 211, 179);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.7s;
+}
+
+.about a:hover {
+  color: rgb(243, 232, 217);
+  text-decoration: none;
+  font-size: 2.5rem;
+  transition: 0.7s;
+}
+
+.about {
+  padding: 5rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(image/mountain.png);
+  background-size: cover;
+}
+
+/*contact*/
+
+.contact a {
+  font-size: 2rem;
+  color: rgb(187, 187, 189);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.7s;
+}
+
+.contact a:hover {
+  color: rgb(223, 223, 227);
+  text-decoration: none;
+  font-size: 2.5rem;
+  transition: 0.7s;
+}
+
+.contact {
+  padding: 5rem 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(image/milky\ way.png);
+  background-size: cover;
+}
+
+/*social links*/
+
+.social-links {
+  padding: 12px 0 8px 0;
+  background-color: rgb(196, 199, 246);
+  text-align: center;
+  word-spacing: 3rem;
+}
+
+footer {
+  text-align: center;
+}
+
+/*mobile display*/
+@media screen and (min-width: 481px) and (max-width: 767px) {
+  * {
+    font-size: 20px;
+  }
+}
+
+/*tablet display*/
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  * {
+    font-size: 22px;
+  }
+
+  main article,
+  aside img {
+    width: 50vw;
+    height: 50vh;
+  }
+
+  /*change aside-img to background-img  in order to adjust img position*/
+  aside img {
+    opacity: 0;
+  }
+
+  aside {
+    background-image: url(image/me.png);
+    background-size: cover;
+    background-position: 80%;
+    -webkit-filter: brightness(90%);
+  }
+
+  .ipad_container,
+  .main_content {
+    display: flex;
+  }
+
+  .social-links,
+  footer {
+    text-align: right;
+    word-spacing: 0;
+    padding: 12px 12px 12px 0;
+  }
+}
+
+/*desktop dispaly*/
+@media screen and (min-width: 1200px) {
+  * {
+    font-size: 27px;
+  }
+
+.navclick{
+  justify-content: end;
+}
+li{
+  margin: 0 2vw 0 0;
+}
+  
+  aside img {
+    object-fit: cover;
+  }
+
+  .main_content section {
+    padding: 120px 0;
+  }
+
+  .main_content section a {
+    font-size: 2rem;
+  }
+
+  .main_content section a:hover {
+    padding: 120px 0;
+    font-size: 2.5rem;
+  }
+
+  .ipad_container,
+  .main_content {
+    display: flex;
+  }
+
+  main article,
+  aside img {
+    width: 50vw;
+    height: 65vh;
+  }
+
+  .social-links,
+  footer {
+    text-align: right;
+    word-spacing: 0;
+    padding: 12px 12px 12px 0;
+  }
+}
